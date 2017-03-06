@@ -1,9 +1,10 @@
 def truebooj(number):
+    result = ''
+    if number % 10 == 0:
+        result += 'TrueBooj '
     if number % 3 == 0:
-        return 'True'
-    elif number % 10 == 0:
-        return 'TrueBooj'
-    elif number % 5 == 0:
-        return 'Booj'
-    else:
-        return str(number)
+        result += 'True '
+    if number % 5 == 0:
+        result += 'Booj'
+    result = str(number) if result == '' else result
+    return result
